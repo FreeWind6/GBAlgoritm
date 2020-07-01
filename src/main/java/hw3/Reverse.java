@@ -1,6 +1,6 @@
 package hw3;
 
-public class Main {
+public class Reverse {
     public static void main(String[] args) {
         reverseString("Привет");
     }
