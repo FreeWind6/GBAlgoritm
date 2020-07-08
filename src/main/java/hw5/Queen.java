@@ -1,6 +1,6 @@
 package hw5;
 
-public class Ferz {
+public class Queen {
     /**
      * Размер
      */
@@ -17,7 +17,7 @@ public class Ferz {
                 desk[i][j] = 0;
             }
         }
-        tryFerz(0);
+        tryQueen(0);
         //Вывод на экран
         for (int i = 0; i < size; ++i) {
             for (int j = 0; j < size; ++j) {
@@ -31,16 +31,16 @@ public class Ferz {
         }
     }
 
-    private static boolean tryFerz(int i) {
+    private static boolean tryQueen(int i) {
         boolean result = false;
         for (int j = 0; j < size; ++j) {
             if (desk[i][j] == 0) {
-                setFerz(i, j);
+                setQueen(i, j);
                 if (i == size - 1) {
                     result = true;
                 } else {
-                    if (!(result = tryFerz(i + 1))) {
-                        resetFerz(i, j);
+                    if (!(result = tryQueen(i + 1))) {
+                        resetQueen(i, j);
                     }
                 }
             }
@@ -52,12 +52,12 @@ public class Ferz {
     }
 
     /**
-     * Убираем ферзя с доски
+     * Убираем королеву с доски
      *
      * @param i координата
      * @param j координата
      */
-    private static void resetFerz(int i, int j) {
+    private static void resetQueen(int i, int j) {
         for (int x = 0; x < size; ++x) {
             --desk[x][j];
             --desk[i][j];
@@ -75,12 +75,12 @@ public class Ferz {
     }
 
     /**
-     * Устанавливаем позицию ферзя
+     * Устанавливаем позицию королевы
      *
      * @param i координата
      * @param j координата
      */
-    private static void setFerz(int i, int j) {
+    private static void setQueen(int i, int j) {
         for (int x = 0; x < size; ++x) {
             ++desk[x][j];
             ++desk[i][j];
