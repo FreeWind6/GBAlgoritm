@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         int bound = MAX_VALUE - MIN_VALUE + 1;
-        int balancedCount = 0;
+        int notBalancedCount = 0;
 
         for (int i = 0; i < TREE_COUNT; i++) {
             Tree<Integer> tree = new Tree<>(TREE_HEIGHT);
@@ -29,10 +29,10 @@ public class Main {
                     break;
                 }
             } while (true);
-            if (tree.isBalanced()) {
-                balancedCount++;
+            if (!tree.isBalanced()) {
+                notBalancedCount++;
             }
         }
-        System.out.printf("Сбалансированных деревьев: %d из %d", balancedCount, TREE_COUNT);
+        System.out.printf("Несбалансированных деревьев: %d из %d", notBalancedCount, TREE_COUNT);
     }
 }
