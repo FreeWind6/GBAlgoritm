@@ -5,3 +5,4 @@
 * [Add home work 3](https://github.com/FreeWind6/GBAlgoritm/pull/3)
 * [Add home work 4](https://github.com/FreeWind6/GBAlgoritm/pull/4)
 * [Add home work 5](https://github.com/FreeWind6/GBAlgoritm/pull/5)
+* [Add home work 6](https://github.com/FreeWind6/GBAlgoritm/pull/6)
